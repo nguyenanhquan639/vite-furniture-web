@@ -1,0 +1,562 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --poppins: "Poppins", sans-serif;
+  --righteous: "Righteous", sans-serif;
+  --neutral-1: #222;
+  --neutral-2: #3b3b3b3b;
+  --neutral-3: #515151;
+  --neutral-4: #62626262;
+  --neutral-5: #7e7e7e7e;
+  --neutral-6: #9e9e9e9e;
+  --neutral-7: #b1b1b1b1;
+  --neutral-8: #cfcfcfcf;
+  --neutral-9: #e1e1e1e1;
+  --neutral-10: #f7f7f7;
+  --primary-1: #2b4005;
+  --primary-2: #507712;
+  --primary-3: #7bb026;
+  --primary-4: #c7ea8f;
+  --primary-5: #f2fde0;
+  --secondary-1: #c99a2e;
+  --secondary-2: #e9b949;
+  --secondary-3: #f7d070;
+  --secondary-4: #f8e3a3;
+  --secondary-5: #fffaeb;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--poppins);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---- Header ---- */
+
+header {
+  padding: 0 8.2%;
+  box-shadow: 0 0.25rem 1.5rem var(--neutral-2);
+  padding-bottom: 0.25rem;
+  opacity: 1;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mainBar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.mainBar > h1 {
+  color: var(--primary-1);
+  font-family: var(--righteous);
+}
+
+.searchBar {
+  width: 44%;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--neutral-6);
+  border-radius: 20px;
+  padding: 0.5rem 0.875rem;
+  transition: 0.5s;
+}
+
+.searchBar:focus-within {
+  border-color: var(--secondary-1);
+}
+
+.searchBar > input {
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-left: 0.5rem;
+}
+
+.icons {
+  width: 12%;
+}
+
+.icons > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navBar > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 36.5%;
+  transition: 0.2s;
+}
+
+.navBar > ul > li > a {
+  color: var(--neutral-3);
+  text-decoration: none;
+  font-weight: 300;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.navBar > ul > li > a:focus {
+  color: var(--secondary-2);
+  font-weight: 600;
+  border-bottom: 2px solid var(--secondary-2);
+}
+
+.navBar > ul > li > a:hover {
+  color: var(--secondary-2);
+  transition: 0.2s;
+}
+
+.navBar > div {
+  display: flex;
+  align-items: center;
+  color: var(--neutral-3);
+  gap: 0.25rem;
+}
+
+.navBar > div > i {
+  color: var(--secondary-2);
+}
+
+.navBar > div > span {
+  font-size: 0.875rem;
+}
+
+/* ---- Hero ---- */
+main {
+  padding: 47px 8.2%;
+}
+
+.hero {
+  display: flex;
+  gap: 1.5rem;
+  animation-name: fadeIn, easeIn;
+  animation-duration: 1s;
+}
+
+.hero > img {
+  width: 60%;
+  transition: 0.5s;
+}
+
+.hero > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 4.26% 0;
+  transition: 0.5s;
+}
+
+.hero > div > h1 {
+  font-family: var(--righteous);
+  font-size: 2.5rem;
+  color: var(--neutral-1);
+  transition: 0.5s;
+}
+
+.hero > div > p {
+  color: var(--neutral-3);
+  border-left: 8px solid var(--secondary-2);
+  padding-left: 16px;
+  font-size: 1rem;
+  margin-top: 1.16%;
+  transition: 0.5s;
+}
+
+.hero > div > button {
+  padding: 8px 24px;
+  color: var(--neutral-10);
+  border: none;
+  border-radius: 8px;
+  background-color: var(--secondary-2);
+  margin-top: 4.26%;
+  cursor: pointer;
+}
+
+/* ---- Categories ---- */
+.categories {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation-name: easeIn, fadeIn;
+  animation-duration: 2s;
+}
+
+.subTitle {
+  font-family: var(--poppins);
+  font-weight: 300;
+  color: var(--neutral-1);
+}
+
+.title {
+  font-family: var(--righteous);
+  font-weight: 400;
+  color: var(--neutral-1);
+}
+
+.categoriesList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+  overflow-y: hidden;
+  gap: 1.25rem;
+}
+
+.categoriesList > div {
+  text-align: center;
+}
+
+.categoriesList > div > p {
+  padding: 10px 0;
+  color: var(--neutral-3);
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-4);
+  border: none;
+  border-radius: 50%;
+}
+
+/* ---- Trending Products ---- */
+.trending,
+.bestDeal,
+.shopByRoom,
+.discover,
+.shareHome {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation-name: easeIn, fadeIn;
+  animation-duration: 2s;
+}
+
+.trending > div,
+.bestDeal > div,
+.discover > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bestDeal > div:nth-child(1) > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.trending > div > a,
+.bestDeal > div > a,
+.discover > div > a {
+  color: var(--primary-1);
+}
+
+.countdownContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.countdown {
+  background-color: var(--primary-5);
+  width: 1.625rem;
+  height: 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--primary-1);
+}
+
+/* ---- Card ---- */
+.list {
+  gap: 20px;
+  overflow: auto;
+}
+
+.card {
+  min-width: 200px;
+  width: 100%;
+  position: relative;
+}
+
+.card > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card > h2 {
+  color: var(--neutral-1);
+  font-size: 1.25rem;
+}
+
+.card > p {
+  color: var(--neutral-3);
+  font-size: 0.75rem;
+}
+
+.lineThrough {
+  text-decoration: line-through;
+  color: var(--neutral-5);
+  font-size: 0.875rem;
+}
+
+.card > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  color: var(--neutral-3);
+}
+
+.card > div > h2 {
+  color: var(--secondary-2);
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.card > div > span {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.card > div > span > img {
+  width: 0.75rem;
+}
+
+.discount {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  padding: 4px 8px;
+  border: 1px solid #eb5757;
+  border-radius: 60px;
+  background-color: rgba(235, 87, 87, 0.2);
+}
+
+.heart {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(225, 225, 225, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* ---- Shop By Room ---- */
+.roomContainer {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 24px 16px;
+  grid-template-areas:
+    "div1 div1 div2 div5"
+    "div3 div4 div4 div5";
+}
+.div1 > img,
+.div2 > img,
+.div3 > img,
+.div4 > img,
+.div5 > img {
+  width: 100%;
+  height: 100%;
+  transition: 0.2s;
+  object-fit: cover;
+  object-position: center;
+}
+
+.div1,
+.div2,
+.div3,
+.div4,
+.div5 {
+  position: relative;
+}
+
+.div1 {
+  grid-area: div1;
+}
+.div2 {
+  grid-area: div2;
+}
+.div3 {
+  grid-area: div3;
+}
+.div4 {
+  grid-area: div4;
+}
+.div5 {
+  grid-area: div5;
+}
+
+.direct {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  color: white;
+  font-size: 1rem;
+}
+
+/* ----- Share Your Home Idea ----- */
+.shareHome > h1 > span {
+  display: block;
+}
+
+.shareHome > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: red;
+}
+
+.shareHome > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+@media screen and (max-width: 1055px) {
+  html {
+    font-size: 14px;
+  }
+
+  .navBar > ul {
+    width: 70%;
+  }
+
+  .hero {
+    display: block;
+  }
+
+  .hero > img {
+    width: 100%;
+  }
+
+  .hero > div {
+    width: 100%;
+  }
+
+  .searchBar {
+    position: absolute;
+    right: 0;
+  }
+
+  .icons {
+    animation-name: fadeOut;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+  }
+
+  .categoriesList > div > p {
+    font-size: 14px;
+  }
+
+  .roomContainer {
+    grid-template-columns: 25% 25% 50%;
+    grid-template-areas:
+      "div1 div1 div5"
+      "div2 div3 div5"
+      "div4 div4 div5";
+  }
+}
+
+@media screen and (max-width: 575px) {
+  html {
+    font-size: 12px;
+  }
+
+  .direct {
+    font-size: 1.25rem;
+  }
+
+  .roomContainer {
+    grid-template-columns: auto;
+    grid-template-areas:
+      "div1 div1"
+      "div2 div3"
+      "div4 div4"
+      "div5 div5  ";
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes easeIn {
+  from {
+    transform: translateY(50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
